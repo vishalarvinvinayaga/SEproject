@@ -33,7 +33,7 @@ SECRET_KEY = "django-insecure-3nf7wg*5m%t%1@=r=!b19=pq*71g&al5xkj$_gh0u*#3xt6fh8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["13.58.192.139"]
 
 
 # Application definition
@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "rest_framework_simplejwt",
     "chatbot.apps.ChatbotConfig",
-    'django_apscheduler',
+    "django_apscheduler",
 ]
 
 MIDDLEWARE = [
@@ -65,7 +65,7 @@ MIDDLEWARE = [
 
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",  # Add your frontend URL here
+    "https://deployment-anudeep.d1y0334g365vcs.amplifyapp.com",  # Add your frontend URL here
 ]
 
 ROOT_URLCONF = "config.urls"
@@ -155,7 +155,7 @@ REST_FRAMEWORK = {
     ),
 }
 
-#this when deployed
+# this when deployed
 SESSION_ENGINE = "django.contrib.sessions.backends.db"  # Store sessions in the database
 
 SESSION_COOKIE_AGE = 3600  # 2 weeks in seconds
@@ -165,13 +165,13 @@ SESSION_COOKIE_SAMESITE = "None"  # Required for cross-origin cookies
 SESSION_COOKIE_SECURE = True  # Use True if using HTTPS
 SESSION_SAVE_EVERY_REQUEST = True
 
-#dont use this
+# dont use this
 # SESSION_ENGINE = "django.contrib.sessions.backends.db"  # Store session data in the database
 # SESSION_COOKIE_AGE = 3600  # 1 hour in seconds
 # SESSION_EXPIRE_AT_BROWSER_CLOSE = True  # Session ends when the browser is closed
 # SESSION_SAVE_EVERY_REQUEST = True  # Save session on every request
 
-#this is for local setup
+# this is for local setup
 # SESSION_ENGINE = "django.contrib.sessions.backends.db"  # Store sessions in the database
 # SESSION_COOKIE_AGE = 3600  # 1 hour in seconds
 # SESSION_EXPIRE_AT_BROWSER_CLOSE = True  # Expire session when the browser is closed
