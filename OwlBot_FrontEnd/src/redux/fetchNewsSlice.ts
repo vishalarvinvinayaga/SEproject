@@ -36,7 +36,7 @@ export const fetchNews = createAsyncThunk(
         try {
             const articles = await fetchNewsFromApi();
             return articles;
-        } catch (error) {
+        } catch (error:any) {
             return rejectWithValue(error.message);
         }
     }
